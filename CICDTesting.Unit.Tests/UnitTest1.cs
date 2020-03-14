@@ -20,7 +20,7 @@ namespace CICDTesting.Unit.Tests
         [Fact]
         public void Test2()
         {
-            int b = 100;
+            int b = 101;
 
             Assert.Equal(10, b);
         }
