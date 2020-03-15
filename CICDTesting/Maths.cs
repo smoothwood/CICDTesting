@@ -15,10 +15,10 @@ namespace CICDTesting
         public int? Divide(int x, int y)
         {
             //uncomment below code lines to make test pass during continuous integration
-            //if (y == 0)
-            //{
-            //    return null;
-            //}
+            if (y == 0)
+            {
+                return null;
+            }
 
             return x / y;
         }
