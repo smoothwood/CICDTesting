@@ -27,7 +27,7 @@ namespace CICDTesting.Unit.Tests
         [InlineData(5,0, null)]
         public void DivideTest(int x, int y, int? expected)
         {
-            //Arrange
+            //Arrange 
             var maths = new Maths();
 
             //Act
