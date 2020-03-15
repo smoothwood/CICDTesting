@@ -9,16 +9,16 @@ namespace CICDTesting
     {
         public int Multiply(int x, int y)
         {
-            return x*y;
+            return x * y;
         }
 
-        public int? Divide(int x,int y)
+        public int? Divide(int x, int y)
         {
             //uncomment below code lines to make test pass during continuous integration
-            if (y == 0)
-            {
-                return null;
-            }
+            //if (y == 0)
+            //{
+            //    return null;
+            //}
 
             return x / y;
         }
