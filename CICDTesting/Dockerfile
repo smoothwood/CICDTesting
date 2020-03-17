@@ -11,7 +11,7 @@ FROM microsoft/dotnet:2.2-aspnetcore-runtime
 COPY --from=build-env /app/out .
 # Expose ports
 EXPOSE 80
-# ENV ASPNETCORE_URLS http://*:80
+ENV ASPNETCORE_URLS http://*:80
 # # Set environment
 # ENV ASPNETCORE_ENVIRONMENT Development
 # Start
