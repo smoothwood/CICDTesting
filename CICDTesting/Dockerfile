@@ -16,8 +16,7 @@ COPY --from=build-env /app/out .
 # Expose ports
 EXPOSE 80
 EXPOSE 443
-# ENV ASPNETCORE_URLS http://*:80
-ENV ASPNETCORE_URLS https://*:443
+ENV ASPNETCORE_URLS http://*:80
 
 #ssh
 EXPOSE 2222
