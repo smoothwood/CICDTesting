@@ -7,7 +7,8 @@ RUN dotnet restore
 COPY . ./
 RUN dotnet publish -c Release -o out
 # Build runtime image
-FROM microsoft/dotnet:2.2-aspnetcore-runtime
+# FROM microsoft/dotnet:2.2-aspnetcore-runtime
+FROM microsoft/dotnet:2.2-sdk
 COPY --from=build-env /app/out .
 # Expose ports
 EXPOSE 80
