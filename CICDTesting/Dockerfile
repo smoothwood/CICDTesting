@@ -12,7 +12,20 @@ COPY --from=build-env /app/out .
 # Expose ports
 EXPOSE 80
 ENV ASPNETCORE_URLS http://*:80
+
+
+#ssh
+EXPOSE 2222
+
+RUN apt update \
+    && apt install -y --no-install-recommends openssh-server \
+    && mkdir -p /run/sshd \
+    && echo "root:Docker!" | chpasswd
+
+COPY sshd_config /etc/ssh/sshd_config
+
 # # Set environment
-ENV ASPNETCORE_ENVIRONMENT Production
+# ENV ASPNETCORE_ENVIRONMENT Production
 # Start
-ENTRYPOINT ["dotnet", "CICDTesting.dll"]
+# ENTRYPOINT ["dotnet", "CICDTesting.dll"]
+ENTRYPOINT ["/bin/bash", "-c", "/usr/sbin/sshd && dotnet CICDTesting.dll"]
