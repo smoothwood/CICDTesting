@@ -23,8 +23,8 @@ namespace CICDTesting.Controllers
 
             //both ways can read ASPNETCORE_ENVIRONMENT variable
             // Configuration/IConfigration can read configuration sources: setting files, environment variables, etc.
-            //string environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
-            string environment = Configuration["ASPNETCORE_ENVIRONMENT"];
+            string environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+            // string environment = Configuration["ASPNETCORE_ENVIRONMENT"];
             ViewData["Environment"] = environment;
             return View();
         }
