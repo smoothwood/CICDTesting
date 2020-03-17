@@ -25,7 +25,7 @@ RUN apt update \
 COPY sshd_config /etc/ssh/sshd_config
 
 # # Set environment
-# ENV ASPNETCORE_ENVIRONMENT Production
+ENV ASPNETCORE_ENVIRONMENT Staging
 # Start
 # ENTRYPOINT ["dotnet", "CICDTesting.dll"]
 ENTRYPOINT ["/bin/bash", "-c", "/usr/sbin/sshd && dotnet CICDTesting.dll"]
