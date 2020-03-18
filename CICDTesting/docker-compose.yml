@@ -3,7 +3,7 @@ services:
   cicdtestingwebsite:
     image: cicdtesting
     ports:
-      - "5555:80"
+      - "80"
     environment:
       - ASPNETCORE_ENVIRONMENT=Testing
-      - HelloMessage=HELLO Testing Environment docker-compose
+      - HelloMessage=HELLO Testing Environment
