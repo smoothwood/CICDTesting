@@ -14,5 +14,6 @@ COPY --from=build-env /app/out .
 # ENV ASPNETCORE_URLS http://*:80
 # # Set environment
 # ENV ASPNETCORE_ENVIRONMENT Development
+ENV TESTVALUE AAA
 # Start
 ENTRYPOINT ["dotnet", "CICDTesting.dll"]
