@@ -1,4 +1,4 @@
-﻿version: '3'
+﻿version: "3"
 services:
   cicdtestingwebsite:
     image: cicdtesting
@@ -6,4 +6,4 @@ services:
       - "5555:80"
     environment:
       - ASPNETCORE_ENVIRONMENT=Testing
-      - HelloMessage=HELLO Testing Environment
+      - HelloMessage=HELLO Testing Environment docker-compose
