@@ -1,9 +1,9 @@
 ﻿version: "3"
 services:
   cicdtestingwebsite:
-    image: cicdtesting
+    image: ycmacr.azurecr.io/cicdtesting
     ports:
-      - "80"
+      - 80:80
     environment:
       - ASPNETCORE_ENVIRONMENT=Testing
       - HelloMessage=HELLO Testing Environment
