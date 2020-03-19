@@ -6,4 +6,4 @@ services:
       - 80:80
     environment:
       - ASPNETCORE_ENVIRONMENT=Staging
-      - HelloMessage=HELLO from docker.compose.yml
+      - HelloMessage=Hello from docker.compose.yml
