@@ -21,13 +21,13 @@ node{
 
     stage('Build Image'){
         echo 'Building image.'
-        sh 'docker build -t ycmcontainerregistry.azurecr.io/cicdtesting CICDTesting'
+        sh 'docker build -t ycmacr.azurecr.io/cicdtesting CICDTesting'
     }
 
     stage('Push Image'){
-        withDockerRegistry(credentialsId: 'AzureContainerRegistry', url: 'https://ycmcontainerregistry.azurecr.io') {
+        withDockerRegistry(credentialsId: 'AzureContainerRegistry', url: 'https://ycmacr.azurecr.io') {
             echo 'Pushing Image.'
-            sh 'docker push ycmcontainerregistry.azurecr.io/cicdtesting'
+            sh 'docker push ycmacr.azurecr.io/cicdtesting'
         }
     }
 }
