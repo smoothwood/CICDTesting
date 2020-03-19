@@ -5,5 +5,5 @@ services:
     ports:
       - 80:80
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - HelloMessage=HELLO Development Environment
+      - ASPNETCORE_ENVIRONMENT=Staging
+      - HelloMessage=HELLO from docker.compose.yml
